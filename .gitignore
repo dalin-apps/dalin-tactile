@@ -5,3 +5,4 @@ demo/events.log
 .DS_Store
 .env
 .env.*
+.codex/
