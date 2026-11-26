@@ -203,9 +203,9 @@ fires every preset with 500 ms gaps for on-device tuning.
 ## Relationships to sibling repos
 
 - **`../tactile-site`** (the public demo, `tactile.dalin.pro`) **vendors a copy of
-  `dist/`** at `src/lib/tactile/`. There is no sync script, so the two can drift,
-  treat `tactile.dalin.pro` as the design source of truth, and re-copy `dist/`
-  after a release. (Tracked as a finding.)
+  `dist/`** at `src/lib/tactile/`. After a release, build and run `npm run sync:site`
+  to copy `dist/` across; `npm run sync:site:check` reports drift and exits 1 without
+  writing. Treat `tactile.dalin.pro` as the design source of truth.
 - **`../notes-app`** is the first intended consumer (swap its `web-haptics` helper
   for `@dalin/tactile`). The haptics roadmap/migration thinking that several source
   comments reference originated in `notes-app/docs/`; the locally-relevant parts are
